@@ -1,0 +1,37 @@
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Docs</title>
+    <link rel="stylesheet" href="home_page_styles.css">
+    <link rel="stylesheet" href="general_styles.css">
+</head>
+
+<body>
+    <header class="top-bar">
+        <!-- difference between window.location.href and <a href="" are that one happens
+      in js and can be applied to something like an image while a is 
+      specifically an element we've used as a link -->
+        <img src="logo.png" alt="logo" onclick="window.location.href='index.html'" class="logo">
+
+        <nav class="nav-buttons">
+            <a href="about.html" class="nav-btn">About</a>
+            <a href="tutorial.html" class="nav-btn">Tutorial</a>
+        </nav>
+    </header>
+
+    <main class="page-content home-page">
+        <h1>Make a new document</h1>
+        <button id="addBtn" onclick="window.location.href='text_editor.html'">+</button>
+
+        <h1>Saved documents</h1>
+        <button id="addBtn" style="font-size: larger;">none saved</button>
+    </main>
+    
+    <footer id="footer">
+        <p class="footer_txt">© 2026 My Collaborative Editor. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

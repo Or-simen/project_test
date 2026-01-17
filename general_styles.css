@@ -1,0 +1,93 @@
+body {
+    /* makes it so theres no white border around the background */
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.top-bar {
+    background-color: white;
+    display: flex;
+    height: 6vh;
+
+/* justify content has the main axis(default horizontal) it either puts elements in the *start/center/end. or 
+it puts a *space between elements so theyre all at the edges of the screen or just *spaced around the center*/
+    justify-content: space-between;
+    
+/*does the align self property on all elements.which either puts elements in the *start/center/end of the cross axis
+or *strech their boxes. by default the elements are in strech*/
+    align-items: center;
+
+    
+    padding: 10px 20px;
+    border-bottom: 2px solid black;
+}
+
+.logo {
+    height: 50px;
+    cursor: pointer;
+}
+
+.nav-buttons {
+    display: flex;
+    /*gaps between buttons. with percentages the elements are spaced relative to the container's width 
+    and can go out of bounds so its important to use a fixed value like px or em instead*/
+    gap: 10px;
+}
+
+.nav-btn {
+    text-decoration: none;
+    /*padding is usually up down like here or even to the sides with a third input 
+    but with 4 it goes from up and in a clockwork direction are the padding changes */
+    padding: 8px 14px;
+    border: 2px solid black;
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.nav-btn:hover {
+    background-color: rgb(0, 90, 90);
+}
+
+.page-content {
+    flex: 1;
+    display: flex;
+    /* if i had an align content it would be the same as justify content but its on the cross axis */
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.page-content.centered {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    align-items: center;
+    flex-direction: row; 
+
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.footer_txt {
+    color: white;
+    font-size: small;
+}
+
+@media (max-width: 767px) {
+    .page-content.centered {
+        flex-direction: column;
+    }
+    .card {
+        width: 65%;
+    }
+}

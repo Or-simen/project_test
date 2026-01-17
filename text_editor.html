@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>text editor</title>
+  <link rel="stylesheet" href="editor_styles.css">
+  <link rel="stylesheet" href="general_styles.css">
+</head>
+
+<body>
+  <header class="top-bar">
+    <!-- difference between window.location.href and <a href="" are that one happens
+      in js and can be applied to something like an image while a is 
+      specifically an element we've used as a link -->
+    <img src="logo.png" alt="logo" onclick="window.location.href='index.html'" class="logo">
+
+    <nav class="nav-buttons">
+      <a href="about.html" class="nav-btn">About</a>
+      <a href="tutorial.html" class="nav-btn">Tutorial</a>
+    </nav>
+  </header>
+
+  <!--contenteditable means the element can get an input in RTF(Rich Text Format) which means
+   it supports formatting like bold, diffrent colors, etc. -->
+  <main class="page-content editor-page">
+    <input id="docNameInput" type="text" placeholder="no name">
+
+    <section id="formatting-toolbar">
+      <label class="radio_container" style="margin-left: 20px;">
+        <input type="checkbox" class="radio_input">
+        <span class="format-btn"><b>B</b></span>
+      </label>
+
+      <label class="radio_container">
+        <input type="checkbox" class="radio_input">
+        <span class="format-btn"><i>I</i></span>
+      </label>
+
+      <label class="radio_container">
+        <input type="checkbox" class="radio_input">
+        <span class="format-btn"><u>U</u></span>
+      </label>
+
+    </section>
+
+    <div id="editor" contenteditable="true">
+
+    </div>
+  </main>
+
+  <footer id="footer">
+    <p class="footer_txt">© 2026 My Collaborative Editor. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

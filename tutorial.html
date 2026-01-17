@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="card_pages_styles.css">
+    <link rel="stylesheet" href="general_styles.css">
+</head>
+
+<body>
+    <header class="top-bar">
+        <!-- difference between window.location.href and <a href="" are that one happens
+      in js and can be applied to something like an image while a is 
+      specifically an element we've used as a link -->
+        <img src="logo.png" alt="logo" onclick="window.location.href='index.html'" class="logo">
+
+        <nav class="nav-buttons">
+            <a href="about.html" class="nav-btn">About</a>
+            <a href="tutorial.html" class="nav-btn">Tutorial</a>
+        </nav>
+    </header>
+
+    <main class="page-content centered" style="flex-direction: column;">
+        <div class="card">
+            <h1 class="title">How To Use</h1>
+
+            <h2>1. Open the Editor</h2>
+            <p class="card_txt">
+                Open the project in your browser.
+                Navigate to the document editor page.
+            </p>
+
+            <h2>2. Name the Document</h2>
+            <p class="card_txt">
+                Click on the document name field and type a name for your document.
+            </p>
+
+            <h2>3. Edit the Document</h2>
+            <p class="card_txt">
+                Start typing inside the editor area.
+            </p>
+
+            <h2>4. copy paste</h2>
+            <p class="card_txt">
+                Copy and paste text within the editor, you can seethat the text is changed
+            </p>
+
+            <h2>Notes</h2>
+            <ul>
+                <li>No database is used — the document lives in memory.</li>
+                <li>Refreshing the page resets the document.</li>
+                <li>This project is intended for learning and experimentation.</li>
+            </ul>
+        </div>
+    </main>
+    
+    <footer id="footer">
+        <p class="footer_txt">© 2026 My Collaborative Editor. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

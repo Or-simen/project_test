@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="card_pages_styles.css">
+    <link rel ="stylesheet" href="about_styles.css">
+        <link rel="stylesheet" href="general_styles.css">
+
+</head>
+
+<body>
+    <header class="top-bar">
+        <!-- difference between window.location.href and <a href="" are that one happens
+      in js and can be applied to something like an image while a is 
+      specifically an element we've used as a link -->
+        <img src="logo.png" alt="logo" onclick="window.location.href='index.html'" class="logo">
+
+        <nav class="nav-buttons">
+            <a href="about.html" class="nav-btn">About</a>
+            <a href="tutorial.html" class="nav-btn">Tutorial</a>
+        </nav>
+    </header>
+
+    <!--using a space instead of a dot. otherwise css would treat it as if it has both classes-->
+    <main class="page-content centered">
+        <div class="card">
+            <h1 class="title">About This Project</h1>
+
+            <p class="card_txt">
+                This project is a real-time collaborative document editor built
+                to explore how browsers communicate instantly using WebSockets.
+            </p>
+        </div>
+
+        <div class="card">
+            <h1 class="title">My contacts</h1>
+
+<!--default email client on the visitor's computer opens and suggests sending a message to the email address-->
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=example@gmail.com&su=Hello&body=Hi from my project"
+             class="api-btn" style="background-color: brown;">
+                <img src="Gmail_logo_icon.png" alt="gmail_logo">
+                Email
+            </a>
+<!--"api.whatsapp.com" is a server that allows us to perform actions (in this example the /send/ action)without it we would 
+just go to a normal page. after the "?" its just parameters: phone is the number text is the message type is 
+the type of group and app_absent checks if the app exists or to use web. -->
+            <a href="https://api.whatsapp.com/send/?phone=972542250423&text=פליז תן לי בונוס&type=phone_number&app_absent=0" 
+            class="api-btn">
+                <img src="whatsapp-icon-logo.png" alt="whatsapp_logo">
+                whatsapp
+            </a>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <p class="footer_txt">© 2026 My Collaborative Editor. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
